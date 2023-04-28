@@ -1,0 +1,30 @@
+Activity-1
+1. Create two 2GB GPT partition each on /dev/sdb of type linux 
+2. Format above created partitions to create xfs filesystems
+3. Add a new partition that is 512MB in size
+4. Run partbrobe to make kernel aware of partition table changes
+5. Create /backup mount point
+6. Determine UUID of /dev/sdb1 and use UUID to establish persistent mount on /backup
+7. Mount /backup and verify if the mount is success.
+8. Create a mount point /logs and mount the same on 512MB partition which is created earlier.
+9. The above command fails, as you have not created filesystem. Now create an xfs filesystem on 512MB partition
+   and retry step 8 to mount, which will succeed. Do not add /etc/fstab entry.
+8. Reboot the system and check if the mount is available
+9. Observe /backup is mounted and /logs was not mounted as /logs entry doesnt exits in /etc/fstab
+10.Verify all the mounts in the system using mount command.
+
+Activity-2
+1. Do the clean up of the activity-1
+   a) unmount all the filesystems
+   b) remove entries of respected filesystems from /etc/fstab
+   c) remove mount points
+   d) remove partitons
+   e) observe lsblk doesnt show any partitions
+2. Use MBR scheme of partitioning for the below activity. If you have gdisk signature, used dd command to clean up
+3. create three primary partitions eac 512MB in size. Crate xfs filesytems and make persistent mount with UUID. Say mount point name are /green, /red, blue
+4. create 2 more partitons with 120MB each, and mount those on /white and /yellow. Make entries in /etc/fstab accordingly.
+5. create 5 more partitions with 256MB each, and mount them on /chem /phy /math /comp /stat 
+6. Reboot the server and verify your mount. Verify with mount command as well.
+
+
+

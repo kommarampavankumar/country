@@ -1,0 +1,42 @@
+1A)micro:x:1234:4321:hi this is micro:/home/micro:/bin/bash
+2a)700
+3a)bash-profile -i contains information about login shell
+   bash-rc      -it contains information about non-logicalshell
+4a)useradd -u uid -d dir -s shell
+5a)  /etc/passwdfields 7
+username:passwd:uid:gid:comment:/homedirectory/bin/bash
+6a)usermod -g username
+7a)userdel  -r username
+8a).bash-profile
+   .bashrc
+   .bashhistory
+9a)who  list login users
+   last  to listlong userslong users information
+10a)chage -E  days username
+11a)it contains information about users
+12a)
+13a)
+
+
+14a)shadowfields 9
+1 username
+2 incrypt password
+3 passwd lastchange
+4 mindays
+5 maxdays
+6 warning
+7 inactive
+8 expirepasswd
+9 futureuses
+15a)passwdfields-7
+username:passwd:uid:gid:comment:/homedirector:/bin/bash
+16a)644
+17a)who
+18a)lastcommand prints the login and logout details
+19a)usermod -L username
+20a)usermod -u uidnumber username
+21a)chage -E -l username
+22a)chage -d o username
+23a)lvextend -L pesize /dev/vgname/lvname
+24a)lvreduce -L pezize /dev/vgname/lvname
+25a)
